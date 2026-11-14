@@ -5,7 +5,7 @@
 | 경로 | 응답 |
 | --- | --- |
 | `GET /` | 소개 화면 |
-| `GET /api/health` | `200 {"ok":true}` |
+| `GET /healthz` | `200 {"ok":true}` |
 | `GET /api/info` | `{ time, uptimeSeconds, visits, hasApiKey }` |
 
 ## 배포 설정
@@ -13,5 +13,5 @@
 - Dockerfile: `Dockerfile` (루트)
 - 실행 방식: 서버(server), 포트 `8080`
 - 공개 경로: `/`
-- 동작 확인: http `/api/health`
+- 동작 확인: http `/healthz`
 - 비밀값: `DEMO_API_KEY` (아무 값이나)

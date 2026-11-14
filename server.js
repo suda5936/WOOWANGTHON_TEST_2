@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
   if (req.method === 'GET' && url.pathname === '/') {
     visits += 1
     send(res, 200, 'text/html; charset=utf-8', page)
-  } else if (req.method === 'GET' && url.pathname === '/api/health') {
+  } else if (req.method === 'GET' && url.pathname === '/healthz') {
     send(res, 200, 'application/json', JSON.stringify({ ok: true }))
   } else if (req.method === 'GET' && url.pathname === '/api/info') {
     send(
