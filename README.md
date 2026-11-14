@@ -10,7 +10,7 @@
 
 ## 배포 설정
 
-- Dockerfile: `Dockerfile` (루트)
+- Dockerfile: `docker/Dockerfile` (빌드 컨텍스트는 루트)
 - 실행 방식: 서버(server), 포트 `8080`
 - 공개 경로: `/`
 - 동작 확인: http `/api/health`
