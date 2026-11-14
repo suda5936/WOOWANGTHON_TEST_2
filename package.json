@@ -3,5 +3,5 @@
   "private": true,
   "engines": { "node": "22" },
   "scripts": { "start": "node server.js" },
-  "dependencies": { "@wanggane/memo-ui": "^1.0.0" }
+  "dependencies": {}
 }
