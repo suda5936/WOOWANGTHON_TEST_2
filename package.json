@@ -2,5 +2,6 @@
   "name": "wanggane-memo",
   "private": true,
   "engines": { "node": "22" },
-  "scripts": { "start": "node server.js" }
+  "scripts": { "start": "node server.js" },
+  "dependencies": {}
 }
