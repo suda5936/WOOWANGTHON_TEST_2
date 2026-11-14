@@ -3,7 +3,7 @@ const http = require('node:http')
 const fs = require('node:fs')
 const path = require('node:path')
 
-const PORT = Number(process.env.PORT) || 3000
+const PORT = Number(process.env.APP_PORT) || 8080
 const page = fs.readFileSync(path.join(__dirname, 'public', 'index.html'))
 const startedAt = Date.now()
 let visits = 0

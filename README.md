@@ -11,7 +11,7 @@
 ## 배포 설정
 
 - Dockerfile: `Dockerfile` (루트)
-- 실행 방식: 서버(server), 포트 `8080`
+- 실행 방식: 서버(server), 포트 `8080` (`APP_PORT`로 바꿀 수 있음)
 - 공개 경로: `/`
 - 동작 확인: http `/api/health`
 - 비밀값: `DEMO_API_KEY` (아무 값이나)
