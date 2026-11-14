@@ -4,6 +4,11 @@ const fs = require('node:fs')
 const path = require('node:path')
 
 const PORT = Number(process.env.PORT) || 3000
+const MODE = process.env.MEMO_MODE
+if (MODE !== 'public' && MODE !== 'private') {
+  console.error('MEMO_MODE must be set to public or private (see .env.example)')
+  process.exit(1)
+}
 const page = fs.readFileSync(path.join(__dirname, 'public', 'index.html'))
 const startedAt = Date.now()
 let visits = 0

@@ -15,3 +15,4 @@
 - 공개 경로: `/`
 - 동작 확인: http `/api/health`
 - 비밀값: `DEMO_API_KEY` (아무 값이나)
+- 환경변수: `MEMO_MODE` (`.env.example` 참고)
