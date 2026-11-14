@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package.json ./
 RUN npm install
 COPY server.js ./
-COPY dist ./public
+COPY public ./public
 EXPOSE 3000
 USER node
 CMD ["node", "server.js"]
