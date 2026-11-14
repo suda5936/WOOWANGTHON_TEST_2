@@ -14,7 +14,14 @@ function send(res, status, type, body) {
 }
 
 const server = http.createServer((req, res) => {
+  // 이 앱은 /memo 아래에서만 답한다(학교 공용 주소의 하위 경로로 올리기로 함).
   const url = new URL(req.url, 'http://localhost')
+  if (url.pathname !== '/memo' && !url.pathname.startsWith('/memo/')) {
+    send(res, 404, 'application/json', JSON.stringify({ error: 'not found' }))
+    console.log(`${req.method} ${url.pathname} 404`)
+    return
+  }
+  url.pathname = url.pathname.slice('/memo'.length) || '/'
   if (req.method === 'GET' && url.pathname === '/') {
     visits += 1
     send(res, 200, 'text/html; charset=utf-8', page)
