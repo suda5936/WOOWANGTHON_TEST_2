@@ -1,7 +1,8 @@
-// 과제용 작은 서버. Node 기본 모듈만 쓴다(설치할 의존성 없음).
+// 과제용 작은 서버. 화면 머리말은 팀 메모 UI 패키지로 만든다.
 const http = require('node:http')
 const fs = require('node:fs')
 const path = require('node:path')
+const { banner } = require('@wanggane/memo-ui')
 
 const PORT = Number(process.env.PORT) || 3000
 const page = fs.readFileSync(path.join(__dirname, 'public', 'index.html'))
@@ -29,6 +30,7 @@ const server = http.createServer((req, res) => {
         time: new Date().toISOString(),
         uptimeSeconds: Math.floor((Date.now() - startedAt) / 1000),
         visits,
+        banner: banner('wanggane memo'),
         hasApiKey: Boolean(process.env.DEMO_API_KEY),
       }),
     )
