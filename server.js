@@ -38,6 +38,8 @@ const server = http.createServer((req, res) => {
   console.log(`${req.method} ${url.pathname} ${res.statusCode}`)
 })
 
-server.listen(PORT, () => console.log(`listening on ${PORT}`))
+// 시작할 때 메모 색인을 준비한다(약 45초).
+console.log('warming up the memo index (about 45s)')
+setTimeout(() => server.listen(PORT, () => console.log(`listening on ${PORT}`)), 45_000)
 
 process.on('SIGTERM', () => process.exit(0))

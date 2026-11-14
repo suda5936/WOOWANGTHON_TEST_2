@@ -13,5 +13,5 @@
 - Dockerfile: `Dockerfile` (루트)
 - 실행 방식: 서버(server), 포트 `8080`
 - 공개 경로: `/`
-- 동작 확인: http `/api/health`
+- 동작 확인: http `/api/health` (시작에 약 45초 걸림)
 - 비밀값: `DEMO_API_KEY` (아무 값이나)
